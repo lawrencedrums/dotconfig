@@ -19,6 +19,7 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-Space>'] = cmp.mapping.complete(),
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+  ['<Esc>'] = cmp.mapping.close(),
 })
 
 lsp.set_preferences({
