@@ -4,12 +4,15 @@ follow these steps to install all your nvim configs
 
 ### requirements
 
-install `neovim`, `ripgreb`
+install `neovim`, `ripgreb`, `nerd fonts`
 
 ```
 brew install neovim
 
 brew install ripgreb
+
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
 ```
 
 ### create config directory
@@ -43,4 +46,13 @@ go into the following file
 type `:so` then `:PackerSync` to install all your plugins
 
 if `:so` is giving errors, just quit nvim and reopen
- 
+
+### Commands
+
+for file explorer
+`:Fern . -drawer`
+
+// switching windows (in Vim)
+`ctrl-w` + `w` : move to the next windows
+`ctrl-w` + `h`/`j`/`k`/`l` : move to the left/bot/top/right windows
+
