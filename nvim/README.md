@@ -52,7 +52,13 @@ if `:so` is giving errors, just quit nvim and reopen
 for file explorer
 `:Fern . -drawer`
 
-// switching windows (in Vim)
+switching windows (in Vim)
 `ctrl-w` + `w` : move to the next windows
 `ctrl-w` + `h`/`j`/`k`/`l` : move to the left/bot/top/right windows
+
+set mark 'R'
+`mR`
+go to mark 'R'
+`'R` for the first character of line
+``R` for the exact position of mark
 
