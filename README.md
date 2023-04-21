@@ -1,5 +1,9 @@
 # dot config
 
+### Cheat Sheets
+[Vim](https://vim.rtorr.com/)
+[Tmux](https://tmuxcheatsheet.com/)
+
 ### MacOS Path
 
 ```
@@ -13,12 +17,8 @@ kitty
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 
-neovim & ripgreb:
-
-```
-brew install neovim
-brew install ripgreb
-```
+neovim
+read [this](https://github.com/lawrencedrums/dotconfig/tree/master/nvim#readme)
 
 ### Clone
 

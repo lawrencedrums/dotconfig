@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('lambdalisue/fern.vim')
   use('chentoast/marks.nvim')
+  use('mhinz/vim-signify')
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',

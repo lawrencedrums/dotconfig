@@ -3,6 +3,8 @@ vim.keymap.set("n", "<leader>ne", vim.cmd.Ex)
 
 vim.keymap.set("n", "<C-h>", "<C-d>zz")
 vim.keymap.set("n", "<C-l>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
