@@ -34,6 +34,15 @@ return require('packer').startup(function(use)
   use('chentoast/marks.nvim')
   use('mhinz/vim-signify')
   use {
+      'folke/trouble.nvim',
+      requires = 'nvim-tree/nvim-web-devicons',
+      config = function()
+      require('trouble').setup {
+          mode = 'document_diagnostics'
+      }
+      end
+  }
+  use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
 	  requires = {
