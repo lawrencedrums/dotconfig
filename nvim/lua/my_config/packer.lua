@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
   use('lambdalisue/fern.vim')
   use('chentoast/marks.nvim')
   use('mhinz/vim-signify')
+  use('lukas-reineke/indent-blankline.nvim')
   use {
       'folke/trouble.nvim',
       requires = 'nvim-tree/nvim-web-devicons',

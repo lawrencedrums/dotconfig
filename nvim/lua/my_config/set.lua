@@ -26,3 +26,6 @@ vim.g.mapleader = " "
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+
+vim.opt.list = true
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#363636 gui=nocombine]]
