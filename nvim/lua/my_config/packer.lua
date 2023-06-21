@@ -25,14 +25,22 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use('lambdalisue/fern.vim')
+    use('nvim-tree/nvim-web-devicons')
+    use('yamatsum/nvim-nonicons')
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
     use('chentoast/marks.nvim')
-    -- use('mhinz/vim-signify')
     use('lewis6991/gitsigns.nvim')
     use('lukas-reineke/indent-blankline.nvim')
     use {
         'folke/trouble.nvim',
-        requires = 'nvim-tree/nvim-web-devicons',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
         config = function()
         require('trouble').setup {
             mode = 'document_diagnostics'

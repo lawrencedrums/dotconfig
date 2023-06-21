@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["fern.vim"] = {
-    loaded = true,
-    path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/fern.vim",
-    url = "https://github.com/lambdalisue/fern.vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -153,6 +148,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nonicons"] = {
+    loaded = true,
+    path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/nvim-nonicons",
+    url = "https://github.com/yamatsum/nvim-nonicons"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     loaded = true,
