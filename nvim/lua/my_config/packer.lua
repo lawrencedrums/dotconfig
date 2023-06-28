@@ -6,12 +6,6 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    use {
-	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	    -- or                          , branch = '0.1.x',
-	    requires = { {'nvim-lua/plenary.nvim'} }
-    }
-
     use({
 	    'rose-pine/neovim',
 	    as = 'rose-pine',
@@ -22,20 +16,16 @@ return require('packer').startup(function(use)
 	    vim.cmd('colorscheme rose-pine')
 	    end
     })
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-    use('mbbill/undotree')
-    use('tpope/vim-fugitive')
-    use('nvim-tree/nvim-web-devicons')
-    use('yamatsum/nvim-nonicons')
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons',
-        },
-    }
     use('chentoast/marks.nvim')
     use('lewis6991/gitsigns.nvim')
     use('lukas-reineke/indent-blankline.nvim')
+    use('mbbill/undotree')
+    use('nvim-tree/nvim-web-devicons')
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('tpope/vim-fugitive')
+    use('vim-airline/vim-airline')
+    use('vim-airline/vim-airline-themes')
+    use('yamatsum/nvim-nonicons')
     use {
         'folke/trouble.nvim',
         requires = {
@@ -46,6 +36,27 @@ return require('packer').startup(function(use)
             mode = 'document_diagnostics'
         }
         end
+    }
+    use {
+        'folke/which-key.nvim',
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- your config
+            }
+        end
+    }
+    use {
+	    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+	    -- or                          , branch = '0.1.x',
+	    requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
     }
     use {
 	    'VonHeikemen/lsp-zero.nvim',
