@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
--- vim.keymap.set("n", "<leader>ne", ":NvimTreeOpen<CR>")
-vim.keymap.set("n", "<leader>ne", ":NvimTreeFindFile<CR>")
+-- vim.keymap.set("n", "<leader>ne", ":NvimTreeFindFile<CR>")
 -- vim.keymap.set("n", "<leader>ne", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>ne", ":NvimTreeOpen<CR>")
 
 vim.keymap.set("n", "<C-h>", "<C-d>zz")
 vim.keymap.set("n", "<C-l>", "<C-u>zz")
