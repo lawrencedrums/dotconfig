@@ -1,7 +1,7 @@
 require('barbar').setup {
-    sidebar_filetypes = {
-        NvimTree = true,
-    }
+    -- sidebar_filetypes = {
+    --     NvimTree = true,
+    -- }
 }
 
 local wk = require('which-key')

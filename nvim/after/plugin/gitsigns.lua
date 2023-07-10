@@ -12,11 +12,11 @@ require('gitsigns').setup{
     -- map('n', '<leader>yD', function() gs.diffthis('~') end)
     local mappings = {
         ["<leader>gb"] = { gs.toggle_current_line_blame, "Gitsigns: toggle blame" },
-        ["<leader>gd"] = { gs.toggle_diffthis,           "Gitsigns: diffthis" },
         ["<leader>gy"] = { gs.toggle_signs,              "Gitsigns: toggle" },
-        ["<leader>gD"] = {
+        ["<leader>gt"] = { gs.diffthis,                  "Gitsigns: diffthis" },
+        ["<leader>gT"] = {
             function()
-                gs.diffthis('~')
+                gs.diffthis('~1')
             end,
             "Gitsigns: diff last commit",
         },

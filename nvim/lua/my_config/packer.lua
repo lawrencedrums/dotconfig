@@ -11,10 +11,30 @@ return require('packer').startup(function(use)
 	    as = 'rose-pine',
 	    config = function()
 		    require('rose-pine').setup({
-	            variant = 'moon'
+	            variant = 'dawn',
+                -- groups = { background = '#fefdfd' }
 		    })
-	    vim.cmd('colorscheme rose-pine')
+        -- vim.cmd('colorscheme rose-pine-dawn')
 	    end
+    })
+    use({'catppuccin/nvim',
+        as = 'catppuccin',
+        config = function()
+            require('catppuccin').setup({
+                flavor = "latte",
+                background = {
+                    light = "latte",
+                    dark = "latte",
+                },
+                color_overrides = {
+                    latte = {
+                        base = "#fefdfd",
+                        mantle = "#f0f1f5"
+                    }
+                }
+            })
+            vim.cmd('colorscheme catppuccin')
+        end
     })
     use('chentoast/marks.nvim')
     use('lewis6991/gitsigns.nvim')
@@ -24,8 +44,8 @@ return require('packer').startup(function(use)
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('romgrk/barbar.nvim')
     use('tpope/vim-fugitive')
-    use('vim-airline/vim-airline')
-    use('vim-airline/vim-airline-themes')
+    -- use('vim-airline/vim-airline')
+    -- use('vim-airline/vim-airline-themes')
     use('yamatsum/nvim-nonicons')
     use {
         'folke/trouble.nvim',
