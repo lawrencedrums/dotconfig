@@ -85,7 +85,7 @@ _G.packer_plugins = {
     url = "https://github.com/romgrk/barbar.nvim"
   },
   catppuccin = {
-    config = { "\27LJ\2\nð\1\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\a\0005\4\6\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\20color_overrides\nlatte\1\0\0\1\0\2\tbase\f#fefdfd\vmantle\f#f0f1f5\15background\1\0\2\tdark\nlatte\nlight\nlatte\1\0\1\vflavor\nlatte\nsetup\15catppuccin\frequire\0" },
+    config = { "\27LJ\2\nð\1\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\a\0005\4\6\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\20color_overrides\nlatte\1\0\0\1\0\2\vmantle\f#f0f1f5\tbase\f#fefdfd\15background\1\0\2\nlight\nlatte\tdark\nlatte\1\0\1\vflavor\nlatte\nsetup\15catppuccin\frequire\0" },
     loaded = true,
     path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -134,6 +134,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/lawrencewong/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["marks.nvim"] = {
     loaded = true,
@@ -230,18 +235,18 @@ time([[Defining packer_plugins]], false)
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\nK\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\fvariant\tdawn\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
--- Config for: trouble.nvim
-time([[Config for trouble.nvim]], true)
-try_loadstring("\27LJ\2\nV\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tmode\25document_diagnostics\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
-time([[Config for trouble.nvim]], false)
 -- Config for: catppuccin
 time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\nð\1\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\a\0005\4\6\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\20color_overrides\nlatte\1\0\0\1\0\2\tbase\f#fefdfd\vmantle\f#f0f1f5\15background\1\0\2\tdark\nlatte\nlight\nlatte\1\0\1\vflavor\nlatte\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
+try_loadstring("\27LJ\2\nð\1\0\0\5\0\r\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\a\0005\4\6\0=\4\b\3=\3\t\2B\0\2\0016\0\n\0009\0\v\0'\2\f\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\20color_overrides\nlatte\1\0\0\1\0\2\vmantle\f#f0f1f5\tbase\f#fefdfd\15background\1\0\2\nlight\nlatte\tdark\nlatte\1\0\1\vflavor\nlatte\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
 time([[Config for catppuccin]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\nV\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tmode\25document_diagnostics\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
