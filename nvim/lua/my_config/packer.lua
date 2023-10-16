@@ -12,9 +12,9 @@ return require('packer').startup(function(use)
 	    config = function()
 		    require('rose-pine').setup({
 	            variant = 'dawn',
-                -- groups = { background = '#fefdfd' }
+                groups = { background = '#fefdfd' }
 		    })
-        -- vim.cmd('colorscheme rose-pine-dawn')
+        -- vim.cmd('colorscheme rose-pine-moon')
 	    end
     })
     use({'catppuccin/nvim',

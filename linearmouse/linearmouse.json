@@ -1,10 +1,10 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.2",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
   "schemes" : [
     {
       "pointer" : {
         "acceleration" : 0,
-        "speed" : 0.32,
+        "speed" : 0.6,
         "disableAcceleration" : false
       },
       "if" : {
@@ -16,12 +16,15 @@
         }
       },
       "scrolling" : {
+        "speed" : 0,
         "acceleration" : 1,
+        "reverse" : {
+          "vertical" : true
+        },
         "distance" : {
           "horizontal" : 3,
           "vertical" : 6
-        },
-        "speed" : 0
+        }
       }
     }
   ]
