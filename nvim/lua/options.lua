@@ -1,6 +1,3 @@
--- Make sure to set `mapleader` before lazy so your mappings are correct
-vim.g.mapleader = " "
-
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -19,15 +16,15 @@ vim.opt.expandtab = true            -- tabs are spaces, mainly because of python
 -- UI config
 vim.opt.number = true               -- show absolute number
 vim.opt.relativenumber = true       -- add numbers to each line on the left side
-vim.opt.cursorline = false           -- highlight cursor line underneath the cursor horizontally
+vim.opt.cursorline = false          -- highlight cursor line underneath the cursor horizontally
 vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 vim.opt.showmode = false            -- we are experienced, wo don't need the "-- INSERT --" mode hint
+vim.opt.signcolumn = "yes:2"
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
 vim.opt.hlsearch = true             -- DO highlight matches
 vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
-

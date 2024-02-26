@@ -1,9 +1,9 @@
-require("mason").setup({
+require('mason').setup({
   ui = {
     icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗",
+      package_installed = '✓',
+      package_pending = '➜',
+      package_uninstalled = '✗',
     },
   },
 })
@@ -49,7 +49,7 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
     vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
 
-    vim.keymap.set("n", "<leader>F", function()
+    vim.keymap.set('n', '<leader>F', function()
         vim.lsp.buf.format({ async = true })
     end, bufopts)
 end

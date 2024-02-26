@@ -1,5 +1,5 @@
+require('keymaps')
 require('options')
-
 
 -- install lazy.nvim
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
@@ -38,13 +38,11 @@ require('lazy').setup({
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lua',
+      'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
+      'rafamadriz/friendly-snippets',
     },
   },
-
-  -- Snippets
-  'L3MON4D3/LuaSnip',
-  'rafamadriz/friendly-snippets',
 
   -- fuzzy finder
   {
@@ -56,16 +54,31 @@ require('lazy').setup({
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
 
-  -- key map hints
+  -- key map setup & hints
   'folke/which-key.nvim',
+
+  -- improved marks
+  'chentoast/marks.nvim',
+
+  -- ui
+  { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
+  { 'nvim-lualine/lualine.nvim' },
+  { 'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+    },
+    init = function() vim.g.barbar_auto_setup = false end,
+  },
 })
 
 
--- load plugin lua files
+-- load your lua files
 require('colorscheme')
-
+require('plugins.barbar')
 require('plugins.lsp')
+require('plugins.lualine')
+require('plugins.indent-blankline')
+require('plugins.marks')
 require('plugins.nvim-cmp')
 require('plugins.nvim-tree')
-require('plugins.telescope')
 require('plugins.which-key')
