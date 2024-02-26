@@ -50,30 +50,35 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
-  -- key map setup & hints
-  'folke/which-key.nvim',
+  -- git
+  'lewis6991/gitsigns.nvim',
+  'tpope/vim-fugitive',
+
+  -- navigation
+  'chentoast/marks.nvim',
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
 
   -- ui
-  'chentoast/marks.nvim',
+  'folke/which-key.nvim',
   { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
   'nvim-lualine/lualine.nvim',
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
-  { 'romgrk/barbar.nvim',
-    dependencies = {
-      'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
-    },
-    init = function() vim.g.barbar_auto_setup = false end,
-  },
+  'romgrk/barbar.nvim',
 })
 
 
 -- load your lua files
 require('colorscheme')
 require('plugins.barbar')
+require('plugins.harpoon')
+require('plugins.indent-blankline')
 require('plugins.lsp')
 require('plugins.lualine')
-require('plugins.indent-blankline')
 require('plugins.marks')
 require('plugins.nvim-cmp')
 require('plugins.nvim-tree')

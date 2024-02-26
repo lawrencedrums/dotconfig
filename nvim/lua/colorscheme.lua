@@ -1,8 +1,8 @@
 local specs = {
   github_light = {
     syntax = {
-      comment = '#767D85',
-      string = '#224478',
+      comment = '#838A91',
+      string  = '#4B6691',
     },
   },
 }
@@ -17,4 +17,4 @@ vim.cmd('colorscheme github_light')
 
 -- Returns the spec of the specified colorscheme
 -- local spec = require('github-theme.spec').load('github_light')
--- print(vim.inspect(spec))
+-- print(vim.inspect(spec.syntax))

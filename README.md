@@ -4,35 +4,24 @@
 [Vim](https://vim.rtorr.com/)
 [Tmux](https://tmuxcheatsheet.com/)
 
-### MacOS Path
-
-```
-/Users/{user_name}
-```
-
 ### Requirements
 
-kitty
+Install kitty
 ```
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ```
 
-neovim
-read [this](https://github.com/lawrencedrums/dotconfig/tree/master/nvim#readme)
-
-### Clone
+Install `neovim`, `ripgreb`, `nerd fonts`
 
 ```
-git clone https://github.com/lawrencedrums/dotconfig.github
+brew install neovim
 ```
 
-### Install nvim plugins
+```
+brew install ripgreb
+```
 
-Navigate to the following file
-
-`lua/my_config/packer.lua`
-
-type in normal mode `:so`, then `:PackerSync` to install plugins.
-
-if `:so` return any error, `:q` to exit nvim and try again
-
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
