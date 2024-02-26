@@ -50,19 +50,15 @@ require('lazy').setup({
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
-  -- file tree
-  'nvim-tree/nvim-tree.lua',
-  'nvim-tree/nvim-web-devicons',
-
   -- key map setup & hints
   'folke/which-key.nvim',
 
-  -- improved marks
-  'chentoast/marks.nvim',
-
   -- ui
+  'chentoast/marks.nvim',
   { 'lukas-reineke/indent-blankline.nvim', main = "ibl", opts = {} },
-  { 'nvim-lualine/lualine.nvim' },
+  'nvim-lualine/lualine.nvim',
+  'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-web-devicons',
   { 'romgrk/barbar.nvim',
     dependencies = {
       'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
