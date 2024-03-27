@@ -68,13 +68,17 @@ require('lazy').setup({
   'nvim-lualine/lualine.nvim',
   'nvim-tree/nvim-tree.lua',
   'nvim-tree/nvim-web-devicons',
-  'romgrk/barbar.nvim',
+  {
+    'romgrk/barbar.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 })
 
 
 -- load your lua files
 require('colorscheme')
 require('plugins.barbar')
+require('plugins.git')
 require('plugins.harpoon')
 require('plugins.indent-blankline')
 require('plugins.lsp')
