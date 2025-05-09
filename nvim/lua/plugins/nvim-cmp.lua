@@ -16,7 +16,7 @@ cmp.setup({
     },
     mapping = cmp.mapping.preset.insert({
         -- Use <C-b/f> to scroll the docs
-        ['<C-l>'] = cmp.mapping.scroll_docs( -4),
+        ['<C-l>'] = cmp.mapping.scroll_docs(-4),
         ['<C-h>'] = cmp.mapping.scroll_docs(4),
         -- Use <CR>(Enter) to confirm selection
         -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
