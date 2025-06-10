@@ -26,9 +26,17 @@ require('lazy').setup({
   },
 
   -- lsp
-  'neovim/nvim-lspconfig',
-  'williamboman/mason.nvim',
-  'williamboman/mason-lspconfig.nvim',
+  -- 'neovim/nvim-lspconfig',
+  -- 'williamboman/mason.nvim',
+  -- 'williamboman/mason-lspconfig.nvim',
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+      { "mason-org/mason.nvim", opts = {} },
+      "neovim/nvim-lspconfig",
+    },
+  },
 
   -- auto-complete
   {
@@ -46,7 +54,7 @@ require('lazy').setup({
 
   -- fuzzy finder
   {
-    'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
