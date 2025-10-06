@@ -1,36 +1,44 @@
-local ts_builtin = require("telescope.builtin")
+local sn = require("snacks")
 
 local wk = require("which-key")
 
---local mappings =
-
 wk.add({
-  -- nvim-tree
-  { "<leader>ne", "<cmd>NvimTreeFindFile<CR>", desc = "Nvim-tree: find file in tree" },
-  { "<leader>nn", "<cmd>NvimTreeToggle<CR>",   desc = "Nvim-tree: toggle" },
+  -- snacks.picker & explorer
+  { "<leader><space>", function() sn.picker.smart() end,                desc = "Snacks: smart find file" },
+  { "<leader>,", function() sn.picker.buffers() end,                desc = "Buffers" },
+  { "<leader>:", function() sn.picker.command_history() end,        desc = "Command History" },
+  { "<leader>nh", function() sn.picker.notifications() end,         desc = "Notification History" },
+  { "<leader>nn", function() sn.explorer() end,                     desc = "File Explorer" },
+  { "<leader>ne", function() sn.explorer.reveal() end,              desc = "Find file in Explorer" },
 
-  -- telescope
-  { "<leader>ff", ts_builtin.find_files,  desc = "Telescope: find file" },
-  { "<leader>fn", ts_builtin.grep_string, desc = "Telescope: grep string under cursor" },
-  { "<leader>fp",
-    function()
-      ts_builtin.grep_string({ search = vim.fn.input("Grep > ") });
-    end,
-    desc = "Telescope: grep"
-  },
+  -- snacks.find
+  { "<leader>ff", function() sn.picker.files() end,                 desc = "Find Files" },
+  { "<leader>fr", function() sn.picker.recent() end,                desc = "Recent" },
+  -- { "<leader>fc", function() sn.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
+  -- { "<leader>fg", function() sn.picker.git_files() end,          desc = "Find Git Files" },
+  -- { "<leader>fp", function() sn.picker.projects() end,           desc = "Projects" },
 
-  -- harpoon
-  { "<C-e>",      desc = "Harpoon: menu" },
-  { "<leader>hh", desc = "Harpoon: append" },
+  -- snacks.grep
+  { "<leader>fp", function() sn.picker.grep() end,                  desc = "Grep" },
+  { "<leader>fn", function() sn.picker.grep_word() end,             desc = "Visual selection or word", mode = { "n", "x" } },
+  { "<leader>sb", function() sn.picker.lines() end,                 desc = "Buffer Lines" },
+  { "<leader>sB", function() sn.picker.grep_buffers() end,          desc = "Grep Open Buffers" },
+
+  -- snacks.LSP
+  { "gd", function() sn.picker.lsp_definitions() end,               desc = "Snacks: Goto Definition" },
+  { "gD", function() sn.picker.lsp_declarations() end,              desc = "Goto Declaration" },
+  { "gr", function() sn.picker.lsp_references() end, nowait = true, desc = "References" },
+  { "gI", function() sn.picker.lsp_implementations() end,           desc = "Goto Implementation" },
+  { "gy", function() sn.picker.lsp_type_definitions() end,          desc = "Goto T[y]pe Definition" },
+  { "<leader>ss", function() sn.picker.lsp_symbols() end,           desc = "LSP Symbols" },
+  -- { "<leader>sS", function() sn.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
+
+  -- snacks.git
+  -- { "<leader>gg", function() sn.lazygit.open() end, desc = "Lazygit" },
 
   -- barbar
   { "<leader>tT",  "<cmd>BufferCloseAllButVisible<CR>", desc = "barbar: close all buffer except visible" },
   { "<leader>tt",  "<cmd>BufferClose<CR>" ,             desc = "barbar: close current buffer" },
   { "<leader>tn",  "<cmd>BufferPrevious<CR>",           desc = "barbar: previous buffer" },
   { "<leader>te",  "<cmd>BufferNext<CR>",               desc = "barbar: next buffer" },
-
-  -- fugitive
-  { "<leader>gs", vim.cmd.Git, desc = "Fugitive: git" },
 })
-
--- wk.register(mappings)
