@@ -23,7 +23,7 @@ opt.splitbelow = true           -- open new vertical split bottom
 opt.splitright = true           -- open new horizontal splits right
 opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 -- opt.showmode = false            -- we are experienced, wo don't need the "-- INSERT --" mode hint
-opt.signcolumn = 'yes:1'        -- always show sign column with width of 1
+opt.signcolumn = 'yes:2'        -- always show sign column with width of 1
 
 -- Searching
 opt.incsearch = true            -- search as characters are entered

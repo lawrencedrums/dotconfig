@@ -2,9 +2,9 @@ local map = vim.keymap.set
 
 vim.keymap.set('n', 'Q', '<nop>')
 
--- jump up and down for Colemak Mod-DH
-vim.keymap.set('n', '<C-h>', '<C-d>')
-vim.keymap.set('n', '<C-l>', '<C-u>')
+-- jump up and down for Colemak Mod-DH (disabled for neoscroll)
+-- vim.keymap.set('n', '<C-h>', '<C-d>')
+-- vim.keymap.set('n', '<C-l>', '<C-u>')
 
 -- Better defaults
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
