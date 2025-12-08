@@ -1,55 +1,85 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
       "if" : {
         "device" : {
-          "productName" : "USB Receiver",
           "category" : "mouse",
-          "vendorID" : "0x46d",
-          "productID" : "0xc547"
-        }
-      },
-      "scrolling" : {
-        "speed" : 0,
-        "acceleration" : 1,
-        "reverse" : {
-          "vertical" : true
-        },
-        "distance" : {
-          "vertical" : 6,
-          "horizontal" : 3
+          "productID" : "0xc547",
+          "productName" : "USB Receiver",
+          "vendorID" : "0x46d"
         }
       },
       "pointer" : {
-        "speed" : 0.6,
+        "acceleration" : 0,
         "disableAcceleration" : false,
-        "acceleration" : 0
+        "speed" : 0.75
+      },
+      "scrolling" : {
+        "acceleration" : 1,
+        "distance" : {
+          "horizontal" : 3,
+          "vertical" : 7
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : 0
       }
     },
     {
       "if" : {
         "device" : {
-          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "category" : "trackpad",
           "productID" : "0x342",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
           "vendorID" : "0x5ac"
         }
       },
+      "pointer" : {
+        "acceleration" : 0.6,
+        "disableAcceleration" : true
+      },
       "scrolling" : {
-        "speed" : {
-          "vertical" : 0
-        },
         "acceleration" : {
           "vertical" : 1
         },
         "distance" : {
           "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc094",
+          "productName" : "PRO X Wireless",
+          "serialNumber" : "9B59E63B",
+          "vendorID" : "0x46d"
         }
       },
       "pointer" : {
+        "acceleration" : 1.4,
         "disableAcceleration" : true,
-        "acceleration" : 0.6
+        "redirectsToScroll" : false
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
+        }
       }
     }
   ]

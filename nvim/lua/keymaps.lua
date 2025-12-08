@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-vim.keymap.set('n', 'Q', '<nop>')
+map('n', 'Q', '<nop>')
 
 -- jump up and down for Colemak Mod-DH (disabled for neoscroll)
 -- vim.keymap.set('n', '<C-h>', '<C-d>')
@@ -8,6 +8,9 @@ vim.keymap.set('n', 'Q', '<nop>')
 
 -- Better defaults
 map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlight" })
+
+local opts = { noremap = true, silent = true }
+map('n', '<leader>e', vim.diagnostic.open_float, opts)
 
 -- Quick save/quit
 -- map("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
@@ -18,11 +21,18 @@ map("n", "<leader>nn", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer
 map("n", "<leader>ne", "<cmd>NvimTreeFindFile<CR>", { desc = "Find file in file explorer" })
 
 -- Telescope
-map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
-map("n", "<leader>fp", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
-map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
-map("n", "<leader>fr", "<cmd>Telescope oldfiles<CR>", { desc = "Recent files" })
-map("n", "<leader>fn", "<cmd>Telescope grep_string<CR>", { desc = "Find word under cursor" })
+local builtin = require('telescope.builtin')
+map("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+map("n", "<leader>fp", builtin.live_grep, { desc = "Live grep" })
+map("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+map("n", "<leader>fr", builtin.oldfiles, { desc = "Recent files" })
+map("n", "<leader>fn", builtin.grep_string, { desc = "Find word under cursor" })
+map("n", "<leader>ll", function()
+  builtin.colorscheme({
+    enable_preview = true,
+    ignore_builtins = true,
+  })
+end, { desc = "Colorscheme" })
 -- map("n", "<tab>", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 
 -- Buffers barbar
@@ -32,11 +42,11 @@ map("n", "<leader>tn",  "<cmd>BufferPrevious<CR>",           { desc = "barbar: p
 map("n", "<leader>te",  "<cmd>BufferNext<CR>",               { desc = "barbar: next buffer" })
 
 -- Toggle colorscheme
-map("n", "<leader>ll", function()
-  local current = vim.g.colors_name
-  if current == "github_light" then
-    vim.cmd("colorscheme github_dark_default")
-  else
-    vim.cmd("colorscheme github_light")
-  end
-end, { desc = "Toggle light/dark theme" })
+-- map("n", "<leader>ll", function()
+--   local current = vim.g.colors_name
+--   if current == "github_light" then
+--     vim.cmd("colorscheme github_dark_default")
+--   else
+--     vim.cmd("colorscheme github_light")
+--   end
+-- end, { desc = "Toggle light/dark theme" })

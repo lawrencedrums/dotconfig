@@ -22,6 +22,9 @@ return {
               },
             },
           },
+          colorscheme = {
+            enable_preview = true,
+          },
         },
       })
     end,
