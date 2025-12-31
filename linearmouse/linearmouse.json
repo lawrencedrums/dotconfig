@@ -1,29 +1,84 @@
 {
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5",
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.2",
   "schemes" : [
     {
-      "pointer" : {
-        "acceleration" : 0,
-        "speed" : 0.6,
-        "disableAcceleration" : false
-      },
       "if" : {
         "device" : {
-          "productName" : "USB Receiver",
-          "productID" : "0xc547",
           "category" : "mouse",
+          "productID" : "0xc547",
+          "productName" : "USB Receiver",
           "vendorID" : "0x46d"
         }
       },
+      "pointer" : {
+        "acceleration" : 0,
+        "disableAcceleration" : false,
+        "speed" : 0.75
+      },
       "scrolling" : {
-        "speed" : 0,
         "acceleration" : 1,
+        "distance" : {
+          "horizontal" : 3,
+          "vertical" : 7
+        },
         "reverse" : {
           "vertical" : true
         },
+        "speed" : 0
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "trackpad",
+          "productID" : "0x342",
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x5ac"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 0.6,
+        "disableAcceleration" : true
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
         "distance" : {
-          "horizontal" : 3,
-          "vertical" : 6
+          "vertical" : "auto"
+        },
+        "speed" : {
+          "vertical" : 0
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productID" : "0xc094",
+          "productName" : "PRO X Wireless",
+          "serialNumber" : "9B59E63B",
+          "vendorID" : "0x46d"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1.4,
+        "disableAcceleration" : true,
+        "redirectsToScroll" : false
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "distance" : {
+          "vertical" : 3
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "speed" : {
+          "vertical" : 0
         }
       }
     }
