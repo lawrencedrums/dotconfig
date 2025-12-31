@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Setup plugins (modules under lua/plugins)
 require("lazy").setup("plugins", {
-  install = { colorscheme = { "rose-pine", "github_dark_default", "habamax", "default" } },
+  install = { colorscheme = { "github_dark_default", "habamax", "default" } },
   checker = { enabled = false },
 })
 

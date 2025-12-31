@@ -10,16 +10,11 @@ return {
     end
   },
   {
-    "zenbones-theme/zenbones.nvim",
-    dependencies = "rktjmp/lush.nvim",
+    dir = "~/.config/nvim/monochromator.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      vim.g.zenbones_italic_comments = false
-      vim.g.zenbones_italic_strings = false
-      -- vim.g.zenbones_darken_comments = 45
-      vim.cmd.colorscheme('zenbones')
-      vim.o.background = 'light'
-    end
+      vim.cmd("colorscheme monochromator")
+    end,
   },
 }
