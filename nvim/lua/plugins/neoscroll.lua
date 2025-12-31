@@ -17,8 +17,9 @@ return {
     neoscroll.setup(opts)
 
     local keymap = {
-      ["<C-l>"] = function() neoscroll.ctrl_u({ duration = 250 }) end,
-      ["<C-h>"] = function() neoscroll.ctrl_d({ duration = 250 }) end,
+      ["<C-l>"] = function() neoscroll.ctrl_u({ duration = 200 }) end,
+      ["<C-h>"] = function() neoscroll.ctrl_d({ duration = 200 }) end,
+      ["zz"]    = function() neoscroll.zz({ half_win_duration = 200 }) end;
     }
     local modes = { 'n', 'v', 'x' }
     for key, func in pairs(keymap) do
